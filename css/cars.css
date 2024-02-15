@@ -123,6 +123,7 @@ body {
 @media (max-width:999px) {
     .about .container .text{
         margin-bottom: 50px;
+        width: fit-content;
     }
 }
 .about .container .text h3 {
@@ -165,7 +166,7 @@ body {
 }
 @media (max-width:767px) {
     .categories .container .card {
-        margin: 20px auto;
+        margin-left: -75px;
     }
 }
 .categories .container .card img {
@@ -232,6 +233,17 @@ body {
 .testimonials .container .reviews .right .person .top {
     display: flex;
     align-items: center;
+}
+@media (max-width:767px) {
+    .testimonials .container .reviews .left .person .top,
+    .testimonials .container .reviews .right .person .top {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+}
+.testimonials .container .reviews .left .person .top .desc,
+.testimonials .container .reviews .right .person .top .desc {
+    display: flex;
 }
 .testimonials .container .reviews .left .person .top img,
 .testimonials .container .reviews .right .person .top img {
