@@ -20,7 +20,7 @@ body {
 }
 .landing {
     background-color: #CCC;
-    height: 100vh;
+    height: 100vb;
     position: relative;
 }
 .landing .container nav {
