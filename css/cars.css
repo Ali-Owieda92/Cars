@@ -1,0 +1,287 @@
+:root {
+    --Main-Color: #743030;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-left: auto;
+}
+.landing {
+    background-color: #CCC;
+    height: 100vh;
+    position: relative;
+}
+.landing .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.landing .container nav > a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke:1px #000;
+    -webkit-text-fill-color: #FFF;
+    position: relative;
+}
+.landing .container nav > a::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    -webkit-text-fill-color: var(--Main-Color);
+    transition: 0.5s;
+    width: 0;
+    overflow: hidden;
+}
+.landing .container nav > a:hover::before {
+    width: 100%;
+}
+@media (max-width:999px) {
+    .landing .container nav > a {
+        margin: 20px auto;
+    }
+}
+.landing .container nav ul {
+    display: flex;
+}
+@media (max-width:999px) {
+    .landing .container nav ul {
+        display: none;
+    }
+}
+.landing .container nav  ul li {
+    list-style: none;
+    padding-right: 20px;
+}
+.landing .container nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: .2s;
+}
+.landing .container nav ul li a:hover,
+.landing .container nav ul li a.active {
+    color: var(--Main-Color);
+}
+.landing .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--Main-Color);
+    width: fit-content;
+}
+.landing .main h2 {
+    font-size: 30px;
+}
+.landing .main p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+.landing .main span {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:999px) {
+    .about .container {
+        flex-direction: column;
+    }
+}
+.about .container .text {
+    width: 500px;
+    text-align: center;
+}
+@media (max-width:999px) {
+    .about .container .text{
+        margin-bottom: 50px;
+    }
+}
+.about .container .text h3 {
+    font-size: 30px;
+    color: var(--Main-Color);
+    margin-bottom: 20px;
+}
+.about .container .text p {
+    opacity: .5;
+}
+.about .container img {
+    border-radius: 20px;
+}
+.categories {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    background-color: #CCC;
+}
+.categories .container {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+    gap: 20px;
+}
+@media (max-width:999px) {
+    .categories .container {
+        grid-template-columns: repeat(2,minmax(300px,1fr));
+        margin-left: 60px;
+    }
+}
+@media (max-width:767px) {
+    .categories .container {
+        grid-template-columns: repeat(1,minmax(300px,1fr));
+    }
+}
+.categories .container .card {
+    background-color: #FFF;
+    width: 300px;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .categories .container .card {
+        margin: 20px auto;
+    }
+}
+.categories .container .card img {
+    width: 300px;
+    height: 200px;
+}
+.categories .container .card .text {
+    margin-bottom: 10px;
+}
+.categories .container .card .text h2 {
+    color: var(--Main-Color);
+    margin-bottom: 10px;
+}
+.categories .container .card .text p {
+    opacity: .5;
+}
+.categories .container .card .text span {
+    color: #b7a22f;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0 10px;
+}
+.testimonials {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.testimonials .container .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--Main-Color);
+}
+.testimonials .container .heading p {
+    font-size: 13px;
+    opacity: .5;
+}
+.testimonials .container .reviews {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:999px) {
+    .testimonials .container .reviews {
+        flex-direction: column;
+    }
+}
+.testimonials .container .reviews .left,
+.testimonials .container .reviews .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:999px) {
+    .testimonials .container .reviews .left,
+    .testimonials .container .reviews .right {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+.testimonials .container .reviews .left .person,
+.testimonials .container .reviews .right .person {
+    margin-bottom: 20px;
+    background-color: #EEE;
+}
+.testimonials .container .reviews .left .person .top,
+.testimonials .container .reviews .right .person .top {
+    display: flex;
+    align-items: center;
+}
+.testimonials .container .reviews .left .person .top img,
+.testimonials .container .reviews .right .person .top img {
+    width: 80px;
+    margin-right: 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}   
+.testimonials .container .reviews .left .person .top h4,
+.testimonials .container .reviews .right .person .top h4 {
+    color: var(--Main-Color);
+    margin-right: 5px;
+}
+.testimonials .container .reviews .left .person .top span,
+.testimonials .container .reviews .right .person .top span {
+    opacity: .5;
+    font-size: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.testimonials .container .reviews .left .person .top p,
+.testimonials .container .reviews .right .person .top p {
+    color: var(--Main-Color);
+    font-weight: bold;
+}
+.testimonials .container .reviews .left .person .opinion,
+.testimonials .container .reviews .right .person .opinion {
+    text-align: center;
+    margin-bottom: 5px;
+    opacity: .8;
+}
+.testimonials .container .reviews .left .person .rates,
+.testimonials .container .reviews .right .person .rates {
+    text-align: center;
+}
+.testimonials .container .reviews .left .person .rates .filled,
+.testimonials .container .reviews .right .person .rates .filled {
+    color: #dabc1b;
+}
+.testimonials .container .reviews .left .person .rates .far,
+.testimonials .container .reviews .left .person .rates .filled,
+.testimonials .container .reviews .right .person .rates .far,
+.testimonials .container .reviews .right .person .rates .filled  {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--Main-Color);
+    color: #FFF;
+    text-align: center;
+}
